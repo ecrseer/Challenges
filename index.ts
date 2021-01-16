@@ -1,5 +1,5 @@
 let 
-    valo: string[]=["1, 3, 4, 13, 32", "1, 2, 4, 13, 15, 32"],    
+    valo: string[]=["1, 32, 4, 13, 2", "1, 2, 4, 64, 15, 64"],    
     finalValor:number,
     iniciValor:number=0,
     temos:string='';
@@ -17,9 +17,8 @@ while(finalValor!=-1){
         
     let indxNumero: number 
         = valo[1].indexOf(varPrimeiroArr);
-        console.log('prim: '+varPrimeiroArr);
-        console.log('iniciValor: '+iniciValor);
-
+        
+    
        if(indxNumero!=-1){
         let virg:number = 
          valo[1].indexOf(',',indxNumero);
@@ -27,8 +26,15 @@ while(finalValor!=-1){
             valo[1].slice(indxNumero,virg )+',';
         }
 
+      //passa pra proxima ocorrencia de espaço e virgula
       finalValor=valo[0].indexOf(',',finalValor+1);
       iniciValor=valo[0].indexOf(' ',iniciValor+1);
-      console.log('fina eh'+finalValor);     
+         
     
-}console.log('temos: '+temos);
+}
+temos =
+    temos.slice(0,
+        temos.lastIndexOf(',')
+            )
+
+console.log('temos: '+temos);
