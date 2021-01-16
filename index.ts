@@ -1,5 +1,5 @@
 let 
-    valo: string[]=["1, 32, 4, 13, 2", "1, 2, 4, 64, 15, 64"],    
+    valo: string[]=["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"],
     finalValor:number,
     iniciValor:number=0,
     temos:string='';
@@ -12,7 +12,7 @@ while(finalValor!=-1){
     
     let
       varPrimeiroArr: string = valo[0]
-        .slice(iniciValor+1,finalValor+1);//0,3
+        .slice(iniciValor,finalValor+1);//0,3
 
         
     let indxNumero: number 
@@ -35,6 +35,7 @@ while(finalValor!=-1){
 temos =
     temos.slice(0,
         temos.lastIndexOf(',')
-            )
+            );
+      temos = temos.split(' ').join('');
 
 console.log('temos: '+temos);
