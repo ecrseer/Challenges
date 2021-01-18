@@ -1,5 +1,15 @@
 function twoSum(nums: number[], target: number): number[] {
-    nums[0] = 3232;
+    
+    nums = nums.filter(num=>num<target);
+
+    for (var _i = 0; _i < nums.length; _i++) {
+        for (var _y = 0; _y < nums.length; _y++) {                        
+            if(target-(nums[_i]+nums[_y])==0){
+                return [_i,_y];
+            }
+          }
+      }
+
     return nums;
 };
 
