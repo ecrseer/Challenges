@@ -1,5 +1,5 @@
 let 
-    valo: string[]=["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"],
+    valo: string[]=["2, 3, 4", "3"],
     finalValor:number,
     iniciValor:number=0,
     temos:string='';
@@ -38,4 +38,4 @@ temos =
             );
       temos = temos.split(' ').join('');
 
-console.log('temos: '+temos);
+console.log('temos|'+temos);
