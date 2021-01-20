@@ -1,7 +1,8 @@
 function numeroEmArray(vl:number):number[]{
+    vl=vl<0?vl*-1:vl;
     let
-        restos:number[] = [vl%10];
-        vl=Math.floor(vl/10)
+        restos:number[]=[];
+
         while(vl>8){
             restos.push(vl%10);
             vl=Math.floor(vl/10)
@@ -16,15 +17,18 @@ function potencia(_y:number,indi:number):number{
     return pot;
 }
 function reverse(x: number): number {
-    console.log(numeroEmArray(x));
+
+    
     let mvl:number=
-    numeroEmArray(x).reduce((acumul,atualV,indice)=>{        
+    numeroEmArray(x).reduce((acumul,atualV,indice)=>{     
+        
        return acumul+atualV*potencia(x,indice+1);
     },0);
-    return  mvl;
+
+    return  x<0? -1*mvl:mvl;
     
 };
 
 console.log(//4623
-    reverse(3264)
+    reverse(-2)
 );
