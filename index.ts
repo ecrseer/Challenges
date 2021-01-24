@@ -1,10 +1,13 @@
 function numeroEmArray(vl:number):number[]{
-    vl=vl<0?vl*-1:vl;
+    vl=vl<0?
+        vl*-1 :
+        vl;
     let
         restos:number[]=[];
 
-        while(vl>8){
+        while(vl>9){
             restos.push(vl%10);
+            
             vl=Math.floor(vl/10)
         }
         restos.push(vl);
@@ -24,11 +27,13 @@ function reverse(x: number): number {
         
        return acumul+atualV*potencia(x,indice+1);
     },0);
-
+    if(mvl>2**31||mvl<2**-31)
+        mvl=0;
     return  x<0? -1*mvl:mvl;
     
 };
 
 console.log(//4623
-    reverse(-2)
+    reverse(1534236469)
+             
 );
